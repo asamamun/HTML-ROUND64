@@ -1,0 +1,16 @@
+nav{
+    background-color: aquamarine;
+    padding: 20px;
+    margin: 10px;
+    border: 5px dashed rgb(154, 205, 81);
+}
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}

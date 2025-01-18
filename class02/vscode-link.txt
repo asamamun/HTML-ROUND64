@@ -1,0 +1,1 @@
+https://vscode.download.prss.microsoft.com/dbazure/download/stable/fabdb6a30b49f79a7aba0f2ad9df9b399473380f/VSCodeSetup-x64-1.96.2.exe
