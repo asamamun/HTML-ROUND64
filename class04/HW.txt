@@ -1,0 +1,2 @@
+HW: Deprecated and Obsolete Elements and Attributes page 24
+tags: address, body , div, h1 - h6, hr, html , base, head(link, title, style, script)
