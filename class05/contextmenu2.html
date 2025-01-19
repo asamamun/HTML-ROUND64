@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contextmenu Attribute Example</title>
+</head>
+<body>
+  <p contextmenu="customMenu">Right-click on this paragraph to see the custom context menu.</p>
+
+  <!-- Custom context menu -->
+  <menu type="context" id="customMenu">
+    <menuitem label="Say Hello" onclick="alert('Hello!')"></menuitem>
+    <menuitem label="Say Goodbye" onclick="alert('Goodbye!')"></menuitem>
+  </menu>
+</body>
+</html>

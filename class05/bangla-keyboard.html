@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangla Keyboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #textField {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    #keyboard {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-gap: 10px;
+    }
+
+    .key {
+      font-size: 24px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .key:hover {
+      background-color: #dcdcdc;
+    }
+
+    #clear {
+      background-color: #ff0000;
+      color: white;
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Bangla Keyboard </h2>
+
+  <!-- Text Field where Bangla characters will be inserted -->
+  <textarea id="textField" placeholder="Type Bangla here..."></textarea>
+
+  <!-- The Bangla Keyboard -->
+  <div id="keyboard">
+    <button class="key" data-value="&#x0985;">অ</button>
+    <button class="key" data-value="&#x0986;">আ</button>
+    <button class="key" data-value="&#x0987;">ই</button>
+    <button class="key" data-value="&#x0988;">ঈ</button>
+    <button class="key" data-value="&#x0989;">উ</button>
+    <button class="key" data-value="&#x098A;">ঊ</button>
+    <button class="key" data-value="&#x098F;">এ</button>
+    <button class="key" data-value="&#x0990;">ঐ</button>
+    <button class="key" data-value="&#x0993;">ও</button>
+    <button class="key" data-value="&#x0994;">ঔ</button>
+
+    <button class="key" data-value="&#x0995;">ক</button>
+    <button class="key" data-value="&#x0996;">খ</button>
+    <button class="key" data-value="&#x0997;">গ</button>
+    <button class="key" data-value="&#x0998;">ঘ</button>
+    <button class="key" data-value="&#x0999;">ঙ</button>
+    <button class="key" data-value="&#x099A;">চ</button>
+    <button class="key" data-value="&#x099B;">ছ</button>
+    <button class="key" data-value="&#x099C;">জ</button>
+    <button class="key" data-value="&#x099D;">ঝ</button>
+
+    <!-- More characters can be added similarly... -->
+
+    <button id="clear" class="key">Clear</button>
+  </div>
+
+  <script>
+    // Select the text field and keyboard buttons
+    const textField = document.getElementById('textField');
+    const keys = document.querySelectorAll('.key');
+    const clearButton = document.getElementById('clear');
+
+    // Add click event listener for each key
+    keys.forEach((key) => {
+      key.addEventListener('click', () => {
+        const characterEntity = key.getAttribute('data-value');
+        textField.value += characterEntity;  // Append character entity to text field
+      });
+    });
+
+    // Clear text field when clear button is clicked
+    clearButton.addEventListener('click', () => {
+      textField.value = '';  // Clear the text field
+    });
+  </script>
+  
+</body>
+</html>

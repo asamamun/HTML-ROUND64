@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draggable Attribute Example</title>
+  <style>
+    #drag1 {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      margin: 20px;
+      cursor: grab;
+    }
+
+    #dropZone {
+      width: 200px;
+      height: 200px;
+      border: 2px dashed #ccc;
+      text-align: center;
+      line-height: 200px;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    #dropZone.hover {
+      border-color: green;
+      background-color: #f0fff0;
+    }
+
+    .dropped {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0; /* Ensure no external margin affects positioning */
+    }
+  </style>
+</head>
+<body>
+  <h1>Draggable Example</h1>
+
+  <div id="drag1" draggable="true">Drag me!</div>
+  <div id="dropZone">Drop here</div>
+
+  <script>
+    const dragItem = document.getElementById('drag1');
+    const dropZone = document.getElementById('dropZone');
+
+    // Handle drag start
+    dragItem.addEventListener('dragstart', (e) => {
+      e.dataTransfer.setData('text', e.target.id);
+    });
+
+    // Handle drag over
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault(); // Allow dropping by preventing default
+      dropZone.classList.add('hover');
+    });
+
+    // Handle drag leave
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('hover');
+    });
+
+    // Handle drop
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const draggedElementId = e.dataTransfer.getData('text');
+      const draggedElement = document.getElementById(draggedElementId);
+
+      // Append the dragged element to the drop zone
+      dropZone.appendChild(draggedElement);
+
+      // Adjust the position and style of the dragged element
+      draggedElement.classList.add('dropped'); // Apply dropped styles
+      dropZone.classList.remove('hover');
+    });
+  </script>
+</body>
+</html>

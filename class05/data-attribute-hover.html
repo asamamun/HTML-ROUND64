@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Album with Tooltip</title>
+  <style>
+    /* Style for the images */
+    img {
+      cursor: pointer;
+      margin: 10px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    img:hover {
+      border-color: #007bff;
+    }
+
+    /* Style for the custom tooltip */
+    .tooltip {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 8px;
+      border-radius: 5px;
+      display: none;
+      font-size: 14px;
+      pointer-events: none; /* Prevent tooltip from interfering with the mouse */
+      transition: opacity 0.3s;
+    }
+
+    .tooltip.visible {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h3>Image Album</h3>
+  <img src="https://picsum.photos/id/300/200/300" alt="" data-round="45" data-place="usa">
+  <img src="https://picsum.photos/id/301/200/300" alt="" data-round="46" data-place="brazil">
+  <img src="https://picsum.photos/id/303/200/300" alt="" data-round="55" data-place="nepal">
+  <img src="https://picsum.photos/id/304/200/300" alt="" data-round="55" data-place="bd">
+  <img src="https://picsum.photos/id/305/200/300" alt="" data-round="57" data-place="india">
+  <img src="https://picsum.photos/id/306/200/300" alt="" data-round="55" data-place="japan">
+  <img src="https://picsum.photos/id/307/200/300" alt="" data-round="59" data-place="canada">
+  
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+    const images = document.querySelectorAll('img');
+    const tooltip = document.getElementById('tooltip');
+
+    // Add hover event listener to each image
+    images.forEach((img) => {
+      img.addEventListener('mouseenter', (event) => {
+        const round = img.getAttribute('data-round');
+        const place = img.getAttribute('data-place');
+        
+        // Set the tooltip text
+        tooltip.textContent = `Round: ${round}, Place: ${place}`;
+        
+        // Position the tooltip near the image
+        const rect = img.getBoundingClientRect();
+        tooltip.style.left = `${rect.left + window.scrollX + img.offsetWidth / 2 - tooltip.offsetWidth / 2}px`;
+        tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 10}px`;
+        
+        // Show the tooltip
+        tooltip.classList.add('visible');
+      });
+
+      // Hide the tooltip when mouse leaves the image
+      img.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+      });
+    });
+  </script>
+</body>
+</html>

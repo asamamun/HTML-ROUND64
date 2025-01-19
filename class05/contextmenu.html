@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Context Menu Example</title>
+  <style>
+    /* Style the custom menu */
+    #customMenu {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 150px;
+    }
+
+    #customMenu li {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #customMenu li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div id="target" style="width: 200px; height: 100px; background-color: lightblue; text-align: center; line-height: 100px;">
+    Right-click me!
+  </div>
+
+  <!-- Custom context menu -->
+  <ul id="customMenu">
+    <li onclick="alert('Option 1 selected')">Option 1</li>
+    <li onclick="alert('Option 2 selected')">Option 2</li>
+    <li onclick="alert('Option 3 selected')">Option 3</li>
+  </ul>
+
+  <script>
+    const target = document.getElementById('target');
+    const customMenu = document.getElementById('customMenu');
+
+    // Show custom context menu
+    target.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      customMenu.style.display = 'block';
+      customMenu.style.top = `${e.pageY}px`;
+      customMenu.style.left = `${e.pageX}px`;
+    });
+
+    // Hide custom context menu
+    document.addEventListener('click', () => {
+      customMenu.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

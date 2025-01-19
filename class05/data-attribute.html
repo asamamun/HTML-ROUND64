@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>image album</h3>
+    <img src="https://picsum.photos/id/300/200/300" alt="" data-round="45" data-place="usa">
+    <img src="https://picsum.photos/id/301/200/300" alt="" data-round="46" data-place="brazil">
+    <img src="https://picsum.photos/id/303/200/300" alt="" data-round="55" data-place="nepal">
+    <img src="https://picsum.photos/id/304/200/300" alt="" data-round="55" data-place="bd">
+    <img src="https://picsum.photos/id/305/200/300" alt="" data-round="57" data-place="india">
+    <img src="https://picsum.photos/id/306/200/300" alt="" data-round="55" data-place="japan">
+    <img src="https://picsum.photos/id/307/200/300" alt="" data-round="59" data-place="canada">
+    <hr>
+    <div id="round-and-place"></div>
+    <script>
+        // Get all images
+        const images = document.querySelectorAll('img');
+        const displayDiv = document.getElementById('round-and-place');
+    
+        // Add click event listener to each image
+        images.forEach((img) => {
+          img.addEventListener('click', () => {
+            // Get the data attributes
+            const round = img.getAttribute('data-round');
+            const place = img.getAttribute('data-place');
+    
+            // Display the attributes in the div
+            displayDiv.textContent = `Round: ${round}, Place: ${place}`;
+          });
+        });
+      </script>
+</body>
+</html>
