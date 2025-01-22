@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+            font-size: 20px;
+        }
+        th{ 
+            background-color: #04AA6D;
+            color: white;
+            text-align: center;
+            
+        }
+    </style>
+  </head>
+  <body>
+    <h1>HTML 5 tag list</h1>
+    <table>
+      <thead>
+        <tr>
+          <th><strong>Tag</strong></th>
+          <th><strong>Description</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&lt;!DOCTYPE&gt;</code></td>
+          <td>Declares the document type and version of HTML being used.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a&gt;</code></td>
+          <td>Defines a hyperlink.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;abbr&gt;</code></td>
+          <td>Defines an abbreviation or acronym.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;address&gt;</code></td>
+          <td>
+            Defines contact information for an author or owner of a document.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;area&gt;</code></td>
+          <td>Defines an area inside an image map.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;article&gt;</code></td>
+          <td>Represents a self-contained content block.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;aside&gt;</code></td>
+          <td>
+            Defines content that is tangentially related to the main content.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;audio&gt;</code></td>
+          <td>Embeds sound content.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;b&gt;</code></td>
+          <td>Specifies bold text, without implying added importance.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;base&gt;</code></td>
+          <td>
+            Specifies the base URL or target for all relative URLs in a
+            document.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;bdi&gt;</code></td>
+          <td>
+            Isolates a portion of text for bi-directional text formatting.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;bdo&gt;</code></td>
+          <td>Overrides the current text direction.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;blockquote&gt;</code></td>
+          <td>Defines a section quoted from another source.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;body&gt;</code></td>
+          <td>Defines the document body.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;br&gt;</code></td>
+          <td>Inserts a single line break.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;button&gt;</code></td>
+          <td>Defines a clickable button.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;canvas&gt;</code></td>
+          <td>Used to draw graphics via scripting (e.g., JavaScript).</td>
+        </tr>
+        <tr>
+          <td><code>&lt;caption&gt;</code></td>
+          <td>Defines a table caption.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;cite&gt;</code></td>
+          <td>Defines the title of a work.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;code&gt;</code></td>
+          <td>Specifies a piece of computer code.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;col&gt;</code></td>
+          <td>Specifies column properties for an HTML table.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;colgroup&gt;</code></td>
+          <td>Defines a group of columns in a table for formatting.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;data&gt;</code></td>
+          <td>Links content with a machine-readable value.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;datalist&gt;</code></td>
+          <td>Specifies a list of predefined options for an input element.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;dd&gt;</code></td>
+          <td>Defines a description or value in a description list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;del&gt;</code></td>
+          <td>Specifies text that has been deleted from a document.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;details&gt;</code></td>
+          <td>Defines additional details the user can view or hide.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;dfn&gt;</code></td>
+          <td>Specifies a term that is being defined.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;dialog&gt;</code></td>
+          <td>Defines a dialog box or interactive window.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div&gt;</code></td>
+          <td>Defines a generic container for content.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;dl&gt;</code></td>
+          <td>Defines a description list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;dt&gt;</code></td>
+          <td>Defines a term in a description list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;em&gt;</code></td>
+          <td>Marks text with emphasis.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;embed&gt;</code></td>
+          <td>Embeds external content, such as a plugin.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;fieldset&gt;</code></td>
+          <td>Groups related elements in a form.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;figcaption&gt;</code></td>
+          <td>Defines a caption for a <code>&lt;figure&gt;</code> element.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;figure&gt;</code></td>
+          <td>Represents self-contained content, often with a caption.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;footer&gt;</code></td>
+          <td>Defines the footer of a document or section.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;form&gt;</code></td>
+          <td>Defines an HTML form for user input.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h1&gt; to &lt;h6&gt;</code></td>
+          <td>
+            Define headings from most important (<code>&lt;h1&gt;</code>) to
+            least important (<code>&lt;h6&gt;</code>).
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;head&gt;</code></td>
+          <td>Contains metadata and links for scripts, styles, etc.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;header&gt;</code></td>
+          <td>Defines the header of a document or section.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;hgroup&gt;</code></td>
+          <td>Groups heading elements.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;hr&gt;</code></td>
+          <td>Defines a thematic break in the content.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;html&gt;</code></td>
+          <td>Defines the root of an HTML document.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;i&gt;</code></td>
+          <td>
+            Specifies italic text, often for alternate voice or technical terms.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;iframe&gt;</code></td>
+          <td>Embeds another HTML page within the current one.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;img&gt;</code></td>
+          <td>Embeds an image.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;input&gt;</code></td>
+          <td>Defines an input field for user data.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ins&gt;</code></td>
+          <td>Specifies text that has been inserted into a document.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;kbd&gt;</code></td>
+          <td>Represents keyboard input.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;label&gt;</code></td>
+          <td>Defines a label for an <code>&lt;input&gt;</code> element.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;legend&gt;</code></td>
+          <td>Provides a caption for a <code>&lt;fieldset&gt;</code>.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;li&gt;</code></td>
+          <td>Defines a list item.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;link&gt;</code></td>
+          <td>
+            Defines a relationship between the document and an external
+            resource.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;main&gt;</code></td>
+          <td>Specifies the primary content of a document.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;map&gt;</code></td>
+          <td>Defines a client-side image map.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;mark&gt;</code></td>
+          <td>Highlights text.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meta&gt;</code></td>
+          <td>Defines metadata about the document.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;meter&gt;</code></td>
+          <td>Displays a scalar measurement within a known range.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;nav&gt;</code></td>
+          <td>Defines a section of navigation links.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;noscript&gt;</code></td>
+          <td>Defines content to display if scripts are not supported.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;object&gt;</code></td>
+          <td>Embeds an external resource, such as multimedia.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ol&gt;</code></td>
+          <td>Defines an ordered list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;optgroup&gt;</code></td>
+          <td>Groups options in a dropdown list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;option&gt;</code></td>
+          <td>Defines an option in a dropdown list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;output&gt;</code></td>
+          <td>Displays the result of a calculation.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;</code></td>
+          <td>Defines a paragraph.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;picture&gt;</code></td>
+          <td>Provides multiple image resources for responsive design.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;pre&gt;</code></td>
+          <td>Defines preformatted text.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;progress&gt;</code></td>
+          <td>Represents the progress of a task.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;q&gt;</code></td>
+          <td>Defines a short inline quotation.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;rp&gt;</code></td>
+          <td>
+            Provides a fallback for browsers that do not support ruby
+            annotations.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;rt&gt;</code></td>
+          <td>Defines the pronunciation of characters in ruby annotations.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ruby&gt;</code></td>
+          <td>Represents ruby annotations for East Asian typography.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;s&gt;</code></td>
+          <td>Specifies text that is no longer accurate or relevant.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;samp&gt;</code></td>
+          <td>Defines sample output from a program or system.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;script&gt;</code></td>
+          <td>Embeds or links to executable code (e.g., JavaScript).</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section&gt;</code></td>
+          <td>Defines a section in a document.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;select&gt;</code></td>
+          <td>Creates a dropdown list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;small&gt;</code></td>
+          <td>Specifies smaller text.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;source&gt;</code></td>
+          <td>
+            Defines multiple media resources for elements like
+            <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;span&gt;</code></td>
+          <td>Defines a generic inline container for content.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;strong&gt;</code></td>
+          <td>Indicates strong importance.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;style&gt;</code></td>
+          <td>Embeds CSS styles within the document.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;sub&gt;</code></td>
+          <td>Specifies subscript text.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;summary&gt;</code></td>
+          <td>
+            Provides a summary for the <code>&lt;details&gt;</code> element.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;sup&gt;</code></td>
+          <td>Specifies superscript text.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;svg&gt;</code></td>
+          <td>Embeds Scalable Vector Graphics.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;table&gt;</code></td>
+          <td>Defines a table.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;tbody&gt;</code></td>
+          <td>Groups the body content in a table.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;td&gt;</code></td>
+          <td>Defines a table cell.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;template&gt;</code></td>
+          <td>Defines a container for reusable content fragments.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;textarea&gt;</code></td>
+          <td>Defines a multi-line text input field.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;tfoot&gt;</code></td>
+          <td>Groups footer content in a table.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;th&gt;</code></td>
+          <td>Defines a table header cell.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;thead&gt;</code></td>
+          <td>Groups header content in a table.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;time&gt;</code></td>
+          <td>Defines a specific time or duration.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;title&gt;</code></td>
+          <td>Specifies the document title.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;tr&gt;</code></td>
+          <td>Defines a table row.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;track&gt;</code></td>
+          <td>
+            Defines text tracks for <code>&lt;video&gt;</code> or
+            <code>&lt;audio&gt;</code> elements.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;u&gt;</code></td>
+          <td>
+            Represents text with an unarticulated annotation, usually styled as
+            underlined.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;ul&gt;</code></td>
+          <td>Defines an unordered list.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;var&gt;</code></td>
+          <td>
+            Represents a variable in a mathematical expression or programming
+            context.
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;video&gt;</code></td>
+          <td>Embeds video content.</td>
+        </tr>
+        <tr>
+          <td><code>&lt;wbr&gt;</code></td>
+          <td>Suggests a line break opportunity.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
