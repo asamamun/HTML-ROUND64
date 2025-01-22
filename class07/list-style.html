@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordered List with Parentheses</title>
+    <style>
+        ol {
+            list-style-type: none; /* Removes default list numbering */
+            counter-reset: list-item; /* Initializes the counter */
+        }
+
+        ol li {
+            counter-increment: list-item; /* Increment the counter for each list item */
+        }
+
+        ol li::before {
+            content: counter(list-item) ") "; /* Add numbers with closing parenthesis */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Example Ordered List with Parentheses</h2>
+
+<ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+    <li>Five</li>
+    <li>Six</li>
+    <li>Seven</li>
+    <li>Eight</li>
+    <li>Nine</li>
+    <li>Ten</li>
+</ol>
+
+</body>
+</html>
