@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* inline element has no width thay take the width of the content. In order to give width to inline element, we need to use display: inline-block */
+        label{
+            margin-top: 10px;
+            display:inline-block;
+            width: 150px;
+        }
+        input{
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <p>input type can be: text, email, password, radio, checkbox, select, textarea, button, submit, reset, file, hidden, image, url, range, color, date, month, week, time, datetime, datetime-local, search, tel, number</p>
+    <h3>Registration Form</h3>
+    <form action="getvalues.html">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name" name="uname">
+        <br>
+        <label for="">Email</label>
+        <input type="email" name="uemail" required>
+        <br>
+        <label for="">Password</label>
+        <input type="password" placeholder="min 8 character" name="pass1" required>
+        <br>
+        <label for="">Retype Password</label>
+        <input type="password" placeholder="min 8 character, match with the first password" name="pass2" required>
+        <br>
+        <label for=""></label>
+        <input type="submit">
+
+    </form>
+    <hr>
+    <mark>
+        http://localhost/ROUND64/HTML/HTML-ROUND64/class08/forms-ch7/form-basic.html
+    </mark>
+    <mark>
+        http://localhost/ROUND64/HTML/HTML-ROUND64/class08/forms-ch7/form-basic.html?uname=123&uemail=admin%40gmail.com&pass1=88890&pass2=123456
+    </mark>
+    http://localhost/ROUND64/HTML/HTML-ROUND64/class08/forms-ch7/getvalues.html?uemail=asdf%40gmail.com&pass1=1234&pass2=123
+    
+</body>
+</html>

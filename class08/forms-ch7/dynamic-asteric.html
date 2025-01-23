@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Labels Form</title>
+  <style>
+    /* Container for each form group */
+    .form-group {
+      overflow: hidden; /* Clear floated elements */
+      margin-bottom: 10px;
+    }
+
+    /* Float the label to the left */
+    .form-group label {
+      float: left;
+      width: 150px; /* Fixed width for labels */
+      text-align: left; /* Align text to the right */
+      margin-right: 10px;
+    }
+
+    /* Input styling */
+    .form-group input {
+      display: inline-block;
+      
+      padding: 5px;
+    }
+
+    /* Add an asterisk dynamically to labels for required inputs */
+    input:required + label::after {
+      content: " *";
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form action="getvalues.html">
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Enter your name" name="username">
+      <label for="name">Name</label>
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" name="useremail" required>
+      <label for="email">Email</label>
+    </div>
+    <div class="form-group">
+      <input type="password" id="password" placeholder="min 8 characters" name="pass1" required>
+      <label for="password">Password</label>
+    </div>
+    <div class="form-group">
+      <input type="password" id="repassword" placeholder="min 8 characters, match the first password" name="pass2" required>
+      <label for="repassword">Retype Password</label>
+    </div>
+    <div class="form-group">
+      <!-- <input type="datetime-local" id="dob" placeholder="DOB" name="dob"> -->
+      <!-- <input type="time" id="dob" placeholder="DOB" name="dob"> -->
+      <input type="month" id="dob" placeholder="DOB" name="dob">
+      <label for="dob">DOB</label>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</body>
+</html>
