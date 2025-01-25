@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Select</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Country</h1>
+    <form action="#" method="post">
+        <label for="country">Country:</label>
+        <select id="country" name="country" required size="3">
+            <option value="" disabled selected>-- Select Your Country --</option>
+            <!-- Group: Africa -->
+            <optgroup label="Africa">
+                <option value="nigeria">Nigeria</option>
+                <option value="egypt">Egypt</option>
+                <option value="south-africa">South Africa</option>
+                <option value="kenya">Kenya</option>
+                <option value="morocco">Morocco</option>
+            </optgroup>
+            <!-- Group: Asia -->
+            <optgroup label="Asia">
+                <option value="bangladesh" selected>Bangladesh</option>
+                <option value="china">China</option>
+                <option value="india">India</option>
+                <option value="japan">Japan</option>
+                <option value="south-korea">South Korea</option>
+                <option value="indonesia">Indonesia</option>
+            </optgroup>
+            <!-- Group: Europe -->
+            <optgroup label="Europe">
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="united-kingdom">United Kingdom</option>
+                <option value="italy">Italy</option>
+                <option value="spain">Spain</option>
+            </optgroup>
+            <!-- Group: North America -->
+            <optgroup label="North America">
+                <option value="united-states">United States</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+                <option value="cuba">Cuba</option>
+                <option value="jamaica">Jamaica</option>
+            </optgroup>
+            <!-- Group: South America -->
+            <optgroup label="South America">
+                <option value="brazil">Brazil</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="chile">Chile</option>
+                <option value="peru">Peru</option>
+            </optgroup>
+            <!-- Group: Oceania -->
+            <optgroup label="Oceania">
+                <option value="australia">Australia</option>
+                <option value="new-zealand">New Zealand</option>
+                <option value="fiji">Fiji</option>
+                <option value="papua-new-guinea">Papua New Guinea</option>
+                <option value="samoa">Samoa</option>
+            </optgroup>
+            <!-- Group: Antarctica -->
+            <optgroup label="Antarctica">
+                <option value="research-station">Research Station</option>
+            </optgroup>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
