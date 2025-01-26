@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladeshi Newspapers</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        .menu {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            flex-grow: 1;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="https://www.prothomalo.com" target="main-frame">Prothom Alo</a>
+        <a href="https://www.bd-pratidin.com" target="main-frame">BD Pratidin</a>
+        <a href="https://www.jugantor.com" target="main-frame">Jugantor</a>
+        <a href="https://www.kalerkantho.com" target="main-frame">Kaler Kantho</a>
+        <a href="https://www.thedailystar.net" target="main-frame">The Daily Star</a>
+        <a href="https://www.dhakatribune.com" target="main-frame" rel="noopener noreferrer">Dhaka Tribune</a>
+    </div>
+    <div class="content">
+        <iframe name="main-frame" src="https://www.prothomalo.com"></iframe>
+    </div>
+</body>
+</html>

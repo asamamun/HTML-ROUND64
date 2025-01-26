@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        .topleft{
+            width: 30%;
+           vertical-align: top;
+            text-align: left;
+            padding: 5px;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            background-color: burlywood;
+            margin-top: 5px;
+            text-align: left;
+            padding: 5px;
+            border-radius: 8px;
+            transition: all 2s;
+        }
+        a:hover{
+            text-align: center;
+            background-color: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Newspaper Sites</h1>
+    <table border="1">
+        <tr>
+            <td class="topleft">
+                
+                <a href="https://www.mzamin.com/" target="newscontainer">Daily Manab Jamin</a>
+                <a href="https://www.ittefaq.com.bd/" target="newscontainer">Daily Ittefaq</a>
+                <a href="https://www.prothomalo.com/" target="newscontainer">PALO</a>
+                <a href="https://www.jugantor.com/" target="newscontainer">jugantor</a>
+                
+            </td>
+            <td>
+                <iframe name="newscontainer" src="news.html" frameborder="0" width="100%" height="600px"></iframe>
+            </td>
+
+        </tr>
+    </table>
+</body>
+</html>
