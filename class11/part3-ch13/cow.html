@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a Cow</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cowCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("cowCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Body
+        ctx.fillStyle = "#ffffff"; // White for the cow's body
+        ctx.beginPath();
+        ctx.ellipse(200, 200, 80, 50, 0, 0, Math.PI * 2); // Body ellipse
+        ctx.fill();
+        ctx.stroke();
+
+        // Head
+        ctx.beginPath();
+        ctx.arc(200, 130, 40, 0, Math.PI * 2); // Head circle
+        ctx.fill();
+        ctx.stroke();
+
+        // Eyes
+        ctx.fillStyle = "#000000"; // Black for eyes
+        ctx.beginPath();
+        ctx.arc(185, 120, 5, 0, Math.PI * 2); // Left eye
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(215, 120, 5, 0, Math.PI * 2); // Right eye
+        ctx.fill();
+
+        // Ears
+        ctx.fillStyle = "#ffffff"; // White for ears
+        ctx.beginPath();
+        ctx.ellipse(160, 130, 15, 25, 0, 0, Math.PI * 2); // Left ear
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.ellipse(240, 130, 15, 25, 0, 0, Math.PI * 2); // Right ear
+        ctx.fill();
+        ctx.stroke();
+
+        // Mouth/Nose
+        ctx.fillStyle = "#ffcccc"; // Pink for nose
+        ctx.beginPath();
+        ctx.ellipse(200, 150, 25, 15, 0, 0, Math.PI * 2); // Nose ellipse
+        ctx.fill();
+        ctx.stroke();
+
+        // Nostrils
+        ctx.fillStyle = "#000000"; // Black for nostrils
+        ctx.beginPath();
+        ctx.arc(190, 150, 2, 0, Math.PI * 2); // Left nostril
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(210, 150, 2, 0, Math.PI * 2); // Right nostril
+        ctx.fill();
+
+        // Spots
+        ctx.fillStyle = "#000000"; // Black for spots
+        ctx.beginPath();
+        ctx.arc(180, 200, 15, 0, Math.PI * 2); // Spot 1
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(220, 220, 10, 0, Math.PI * 2); // Spot 2
+        ctx.fill();
+    </script>
+</body>
+</html>
